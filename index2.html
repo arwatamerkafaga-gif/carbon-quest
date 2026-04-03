@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Quest: The HTML Edition</title>
+    <style>
+        /* This is "Internal CSS" so we don't need a separate style.css file */
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            scroll-behavior: smooth; /* Makes the "jump" look like a slide */
+        }
+        .screen {
+            height: 100vh; /* Each story part takes up the whole screen */
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .choice-btn {
+            background-color: #e94560;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none; /* Removes the underline from links */
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .choice-btn:hover {
+            background-color: #ff2e63;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="start" class="screen">
+        <h1>Carbon Quest</h1>
+        <p>You are a tiny Carbon Atom floating in the sky. A gust of wind blows. What do you do?</p>
+        <div class="btn-container">
+            <a href="#forest" class="choice-btn">Fly toward a Forest</a>
+            <a href="#ocean" class="choice-btn">Fall into the Ocean</a>
+        </div>
+    </div>
+
+    <div id="forest" class="screen">
+        <h2>The Oak Tree</h2>
+        <p>You are absorbed by a leaf! Photosynthesis turns you into sugar. Suddenly, a squirrel eats the leaf!</p>
+        <div class="btn-container">
+            <a href="#end-squirrel" class="choice-btn">Stay in the Squirrel</a>
+            <a href="#start" class="choice-btn">Restart Journey</a>
+        </div>
+    </div>
+
+    <div id="ocean" class="screen">
+        <h2>The Deep Blue</h2>
+        <p>It's cold here. You dissolve into the water and a tiny plankton uses you to build its shell.</p>
+        <div class="btn-container">
+            <a href="#end-shell" class="choice-btn">Become a Fossil</a>
+            <a href="#start" class="choice-btn">Restart Journey</a>
+        </div>
+    </div>
+
+    <div id="end-squirrel" class="screen">
+        <h2>The Energy Cycle</h2>
+        <p>The squirrel uses
